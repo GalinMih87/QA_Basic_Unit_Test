@@ -1,0 +1,21 @@
+import unittest
+
+def calculate_square_area(a, b):
+    return a * b
+
+class TestSquareAreaCalculation(unittest.TestCase):
+
+    def test_positive_numbers(self):
+        result = calculate_square_area(5, 5)
+        self.assertEqual(result, 25)  # Очакваме резултатът да е 25
+
+    def test_negative_numbers(self):
+        result = calculate_square_area(-3, 4)
+        self.assertEqual(result, -12)  # Очакваме резултатът да е -12
+
+    def test_zero(self):
+        result = calculate_square_area(0, 10)
+        self.assertEqual(result, 0)  # Очакваме резултатът да е 0
+
+if __name__ == '__main__':
+    unittest.main()
