@@ -1,0 +1,71 @@
+import unittest
+
+class TestStudent(unittest.TestCase):
+    def test_calculate_grade_O(self):
+        # Arrange
+        scores = [90, 95, 92, 88]
+        student = Student("John", "Doe", "12345", scores)
+        
+        # Act
+        grade = student.calculate()
+        
+        # Assert
+        self.assertEqual(grade, 'O')
+    
+    def test_calculate_grade_E(self):
+        # Arrange
+        scores = [85, 88, 92, 80]
+        student = Student("Jane", "Smith", "54321", scores)
+        
+        # Act
+        grade = student.calculate()
+        
+        # Assert
+        self.assertEqual(grade, 'E')
+    
+    def test_calculate_grade_A(self):
+        # Arrange
+        scores = [72, 68, 75, 80]
+        student = Student("Alex", "Johnson", "98765", scores)
+        
+        # Act
+        grade = student.calculate()
+        
+        # Assert
+        self.assertEqual(grade, 'A')
+    
+    def test_calculate_grade_P(self):
+        # Arrange
+        scores = [58, 60, 62, 55]
+        student = Student("Sarah", "Williams", "24680", scores)
+        
+        # Act
+        grade = student.calculate()
+        
+        # Assert
+        self.assertEqual(grade, 'P')
+    
+    def test_calculate_grade_D(self):
+        # Arrange
+        scores = [42, 35, 38, 50]
+        student = Student("Michael", "Brown", "13579", scores)
+        
+        # Act
+        grade = student.calculate()
+        
+        # Assert
+        self.assertEqual(grade, 'D')
+    
+    def test_calculate_grade_T(self):
+        # Arrange
+        scores = [30, 20, 25, 15]
+        student = Student("Emily", "Davis", "02468", scores)
+        
+        # Act
+        grade = student.calculate()
+        
+        # Assert
+        self.assertEqual(grade, 'T')
+
+if __name__ == '__main__':
+    unittest.main()
